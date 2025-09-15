@@ -1,0 +1,27 @@
+/* INCLUSION DES POLICES D'ECRITURE */
+@font-face {
+    font-family: "montserrat";
+    src: url(/assets/fonts/Montserrat-VariableFont_wght.ttf) format("truetype-variations");  
+}
+
+@font-face {
+    font-family: "montserratUnderline";
+    src: url(/assets/fonts/MontserratUnderline-VariableFont_wght.ttf) format("truetype-variations");
+}
+
+@font-face {
+    font-family: "openSans";
+    src: url(/assets/fonts/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype-variations");
+}
+
+:root{
+    --title-color-primary : #CF2D2D;
+    --text-color-primary:  #5C5C5C;
+    --title-color-secondary: #455A64;
+    --background-color-primary: #ffffff;
+    --background-color-secondary: #f7f7f7;
+    --font-family-title: "montserrat";
+    --font-family-text: "openSans" ;
+    --font-family-site-title:"montserratUnderline" ;
+
+}
