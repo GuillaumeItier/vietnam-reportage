@@ -1,4 +1,5 @@
 
+
 p{
     font-family: var(--font-family-text);
     color: var(--title-color-secondary);
@@ -14,14 +15,16 @@ nav > div:first-child {
     display: flex;
     justify-content: space-between;
     width: 100vw;
-    height: 50px;
+    height: 40px;
     background: linear-gradient(182deg, #EF7F84 -20%, #cf2d2d 50%, #E7767B 120%);
 }
 
 /* Trois icones: recherche, menu-hamburger, account*/
+.label-menu-hamburger{
+    cursor: pointer;
+}
 #menu-hamburger-avec-liste{
     height: 2.5em;
-    width: auto;
 }
 
 #menu-hamburger{
@@ -29,13 +32,23 @@ nav > div:first-child {
 }
 
 .menu-categories{
+    width: 200px;
+    border-radius: 2%;
     display: none;
     position : absolute;
     background-color: white;
-    margin-top: 5px;
+    margin-top: 0px;
     border:1px solid black;
     list-style-type: none;
     font-family: var(--font-family-title);
+    font-weight: 500;
+    overflow: hidden;
+    
+}
+.menu-categories li:hover{
+    overflow: visible;
+    padding-left: 20px;
+    transition: 0.5s;
 }
 
 ul li a{
@@ -50,7 +63,60 @@ ul li a{
     display: block;
 }
 
+.menu-categories-horizontal{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+    
+}
 
+.menu-categories-horizontal::-webkit-scrollbar {
+  height: 5px;
+}
+.menu-categories-horizontal::-webkit-scrollbar:hover {
+  height: 20px;
+}
+
+.menu-categories-horizontal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.menu-categories-horizontal::-webkit-scrollbar-thumb {
+  background-color: #f0f0f0;
+  border-radius: 2px;
+  transition: 1s;
+}
+
+.menu-categories-horizontal::-webkit-scrollbar-thumb:hover {
+  background-color: var(--title-color-primary);
+  transition: 1s;
+}
+
+
+
+
+.menu-categories-horizontal a{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--title-color-secondary);
+    font-size: 1em;
+    text-decoration: none;
+    border-left:1px solid black;
+    font-family: var(--font-family-title);
+    font-weight: 500;
+    transition: 0.5s;
+
+}
+
+.menu-categories-horizontal a:hover{
+    color: var(--title-color-primary);
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.5s;
+    
+}
 
 .navContenairIcon{
     width: 50vw;
@@ -96,16 +162,20 @@ h1{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight:800;
-
     text-align: center;
     margin: auto;
     align-self: center;
     font-size: 40pt;
    
-    
+
 }
 .h2Contenair{
     height: 150px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-top: 2px solid var(--title-color-primary) ;
     display: flex;
     justify-content: center;
 }
@@ -138,9 +208,12 @@ h2{
 
     }
     .h2Contenair{
-    height: 60px;
+    height: 100px;
 }
-   
+   .menu-categories-horizontal{
+    display: none;
+    
+}
 
 }
 
@@ -193,6 +266,12 @@ main>section>div:first-of-type{
 
 
 /*Article contenair*/
+.sectionArticle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 #actualityTitle{
     height: 60px;
 }
@@ -200,19 +279,46 @@ main>section>div:first-of-type{
 
 .articleContenair{
     margin:auto;
-    width: 90vw;
+    margin-top: 20px;
+    box-shadow: 0px 1px 2px black;
+    width: 40vw;
     height: 116px;
     display: flex;
 }
 
+
+@media only screen and (max-width:768px){
+    .articleContenair{
+    width: 90vw;
+    }
+}
+
+
+
+
+.articleContenair:hover {
+    box-shadow: none;
+    transition: 1s;
+}
+
 .articleContenairImage{
-    width: 186px;
+    max-width: 186px;
     height: 116px;
+    overflow: hidden;
+}
+
+@media only screen and (min-width:370px) {
+    .articleContenairImage{
+    min-width: 186px;
+    height: 116px;
+    overflow: hidden;
+}
+    
 }
 .articleImage{
-    width: 180px;
-    height: 116px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
