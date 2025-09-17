@@ -5,6 +5,9 @@ p{
     font-size: 16pt;
 }
 
+a{
+    text-decoration: none;
+}
 
 
 /*bandeau rouge du Header*/
@@ -13,7 +16,7 @@ nav > div:first-child {
     justify-content: space-between;
     width: 100vw;
     height: 40px;
-    background: linear-gradient(182deg, #EF7F84 -20%, #cf2d2d 50%, #E7767B 120%);
+    background: linear-gradient(182deg, #EF7F84 -20%, #b01f26 50%, #E7767B 120%);
 }
 
 
@@ -26,7 +29,7 @@ nav>div>a:first-of-type{
 }
 
 img[alt="logo"]{
-    height: 2em;
+    height: 1.8em;
 
 }
 
@@ -157,6 +160,10 @@ img[alt="icone de recherche"]{
     display: flex;
     justify-content: space-evenly;
     overflow: auto;
+}
+
+.menu-categories-horizontal a{
+   white-space: nowrap;
     
 }
 
@@ -217,10 +224,12 @@ img[alt="icone de recherche"]{
 
 h1{
     font-family: var(--font-family-site-title);
-    background: linear-gradient(182deg, #EF7F84 0%, #cf2d2d 50%, #E7767B 100%);
+    color: #cf2d2d;
+    transform: rotate();
+    /*background: linear-gradient(182deg, #EF7F84 0%, #cf2d2d 50%, #E7767B 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;*/
     font-weight:800;
     text-align: center;
     margin: auto;
@@ -260,7 +269,7 @@ h2{
 
 /* début du main */
 main{
-    background-color: #f7f7f7;
+    background-color: #ffffff;
 }
 main>section>div:first-of-type{
     padding-bottom: 2%;
@@ -307,6 +316,7 @@ main>section>div:first-of-type{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background: linear-gradient(to bottom , transparent 0% , transparent 30px , rgb(236, 168, 168));
 }
 
 #actualityTitle{
@@ -408,7 +418,7 @@ footer{
     height: auto;
     width: 100vw;
     max-width: 100vw;
-    background: linear-gradient(182deg, #EF7F84 -20%, #cf2d2d 50%, #E7767B 120%);
+    background: linear-gradient(182deg, #EF7F84 -20%, #b01f26 50%, #E7767B 120%);
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(3,1fr);
@@ -613,6 +623,20 @@ img[alt="icone de Facebook"]{
     }
 }
 
+#carousel{
+    padding-top: 20px;;
+    padding-bottom: 30px;
+}
+
+
+/*.sectionArticle{
+    background-attachment: fixed;
+    background-image: url("../img/night.jpg");
+    background-size: 50%;
+    background-position: center;
+    background-repeat: repeat-y;
+}
+    */
 
 
 
