@@ -9,60 +9,98 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/bootstrap.bundle.js"></script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div>
-                <a href="index.html">
-                    <img src="../assets/img/logoVR.svg" alt="logo">
-                </a>
-                <div class="navContenairIcon">
-                    <div id="menu-hamburger-avec-liste">
-                        <label for="menu-hamburger" class="label-menu-hamburger">
-                            <img src="../assets/img/menuHamburger.svg" alt="menu hamburger">
-                        </label>
-                        <input type="checkbox" id="menu-hamburger" />
-                        <ul class="menu-categories">
-                            <li><a href="#">actualités</a></li>
-                            <li><a href="#">évennements</a></li>
-                            <li><a href="#">sorties</a></li>
-                            <li><a href="#">activités</a></li>
-                            <li><a href="#">lieux</a></li>
-                            <li><a href="#">culture</a></li>
-                            <li><a href="#">politique</a></li>
-                            <li><a href="#">infos pratiques</a></li>
-                            <li><a href="#ul-footer-links-1">contact</a></li>
-                        </ul>     
+    <body id="searchPageBody">
+        <header>
+            <nav>
+                <div>
+                    <a href="index.html">
+                        <img src="../assets/img/logoVR.svg" alt="logo">
+                    </a>
+                    <div class="navContenairIcon">
+                        <div id="menu-hamburger-avec-liste">
+                            <label for="menu-hamburger" class="label-menu-hamburger">
+                                <img src="../assets/img/menuHamburger.svg" alt="menu hamburger">
+                            </label>
+                            <input type="checkbox" id="menu-hamburger" />
+                            <ul class="menu-categories">
+                                <li><a href="#">actualités</a></li>
+                                <li><a href="#">évennements</a></li>
+                                <li><a href="#">sorties</a></li>
+                                <li><a href="#">activités</a></li>
+                                <li><a href="#">lieux</a></li>
+                                <li><a href="#">culture</a></li>
+                                <li><a href="#">politique</a></li>
+                                <li><a href="#">infos pratiques</a></li>
+                                <li><a href="#ul-footer-links-1">contact</a></li>
+                            </ul>     
+                        </div>
+                        <a href="#ul-footer-links-1" id="contact-link">
+                            contact
+                        </a>
+                        <a href="#" id="shearch-icon-text">
+                            recherche <img src="../assets/img/iconeRecherche.svg" alt="icone de recherche">
+                        </a>
+                        <a href="#" id="shearch-only-icon">
+                            <img src="../assets/img/iconeRecherche.svg" alt="icone de recherche">
+                        </a>
+                        <a href="#" id="account-link">
+                            compte
+                        </a>
+                        <a href="#" id="account-icon">
+                            <img src="../assets/img/account_icon.svg" alt="icon de compte">
+                        </a>
                     </div>
-                    <a href="#ul-footer-links-1" id="contact-link">
-                        contact
-                    </a>
-                    <a href="#" id="shearch-icon-text">
-                        recherche <img src="../assets/img/iconeRecherche.svg" alt="icone de recherche">
-                    </a>
-                    <a href="#" id="shearch-only-icon">
-                        <img src="../assets/img/iconeRecherche.svg" alt="icone de recherche">
-                    </a>
-                    <a href="#" id="account-link">
-                        compte
-                    </a>
-                    <a href="#" id="account-icon">
-                        <img src="../assets/img/account_icon.svg" alt="icon de compte">
-                    </a>
                 </div>
+                <div class="menu-categories-horizontal">
+                    <a href="#">actualités</a>
+                    <a href="#">évennements</a>
+                    <a href="#">sorties</a>
+                    <a href="#">activités</a>
+                    <a href="#">lieux</a>
+                    <a href="#">culture</a>
+                    <a href="#">politique</a>
+                    <a href="#">infos pratiques</a>
+                </div>
+                <div id="h1RechercheContenair">
+                    <h1 id="h1Recherche">recherche</h1>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <form id="searchForm">
+                    <div id="searchBarContainer">
+                        <label for="searchInput">Rechercher un article</label>
+                        <input type="search" name="searchInput" id="searchInput" placeholder=" Hanoi…" required>
+                        <button type="submit" id="searchButton">GO</button>
+                    </div>
+                 </form>
+            </section>
+            <section>
+                <div id="searchResultsContainer">
+                </div>
+            </section>
+        </main>
+        <footer>
+            <ul id="ul-footer-links-1">
+                <li><a href="#">nous contacter</a></li>
+                <li><a href="#">à propos</a></li>
+            </ul>
+            <div id="div-footer-links-2">
+                <a href="#">
+                    <img src="../assets/img/yt_icon.svg" alt="icone de Youtube">
+                </a>
+                <a href="#">
+                    <img src="../assets/img/fb_icon.svg" alt="icone de Facebook">
+                </a>
             </div>
-            <div class="menu-categories-horizontal">
-                <a href="#">actualités</a>
-                <a href="#">évennements</a>
-                <a href="#">sorties</a>
-                <a href="#">activités</a>
-                <a href="#">lieux</a>
-                <a href="#">culture</a>
-                <a href="#">politique</a>
-                <a href="#">infos pratiques</a>
-            </div>
-            <div class="h1Contenair">
-                <h1>recherche</h1>
-            </div>
-        </nav>
-    </header>
+            <address id="footer-info">
+                <p>Rédactrice en chef: Nguyen Hoa Nga <br>
+                    Adresse : 80, rue Ly Thuong , Hanoi, Vietnam <br>
+                    Tel: (+84)99 99 99 99 99 <br>
+                    E-mail : courrier@VietnamReporter@gmail.com </p>
+            </address>
+        </footer>
+        <script src="../assets/js/script.js"></script>
+    </body>
+</html>

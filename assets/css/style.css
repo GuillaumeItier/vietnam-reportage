@@ -269,7 +269,7 @@ h2{
 
 /* début du main */
 main{
-    background-color: #ffffff;
+    background-color: var(--background-color-secondary);
 }
 main>section>div:first-of-type{
     padding-bottom: 2%;
@@ -358,6 +358,7 @@ main>section>div:first-of-type{
 
 .articleContenairInfo{
     width: 100%;
+    min-width: 150px;
     height: 116px;
     display: grid;
     grid-template:30% 40% 30%/30% 40% 30%;
@@ -377,6 +378,10 @@ main>section>div:first-of-type{
     grid-area: 1/1/2/4;
     display: flex;
     justify-content: space-between;
+}
+
+.articleInfoTop > em {
+   white-space: nowrap;
 }
 
 .h4-ArticleTitle{
@@ -508,6 +513,70 @@ img[alt="icone de Facebook"]{
     
 
 }
+/*---------ICI   débute la page recherche-------------------*/
+
+
+#searchPageBody>div{
+    min-height: 100;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+#h1Recherche{
+    font-family: var(--font-family-title);
+    margin: 30px;
+}
+
+
+#searchBarContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#searchInput{
+    font-family: var(--font-family-title);
+    width: 200px;
+    height: 26px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+
+#searchButton{
+    margin: 10px;
+    font-family: var(--font-family-title);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: var(--title-color-secondary);
+    
+
+}
+
+#searchResultsContainer{
+    height: auto;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*responsive du h1 et son contenair pour smartphone*/
 @media only screen and (max-width:768px){
