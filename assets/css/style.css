@@ -7,8 +7,6 @@ p{
 
 
 
-
-
 /*bandeau rouge du Header*/
 nav > div:first-child {
     display: flex;
@@ -18,12 +16,82 @@ nav > div:first-child {
     background: linear-gradient(182deg, #EF7F84 -20%, #cf2d2d 50%, #E7767B 120%);
 }
 
-/* Trois icones: recherche, menu-hamburger, account*/
+
+
+/* logo top left */
+nav>div>a:first-of-type{
+    display: inline;
+    align-self: center;
+    margin-left: 20px;
+}
+
+img[alt="logo"]{
+    height: 2em;
+
+}
+
+
+
+
+
+.navContenairIcon{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img[alt="menu hamburger"]{
+    height: 2.2em;
+    width: auto;
+    margin-top: 0.18em;
+}
+
+img[alt="icon de compte"]{
+    height: 1.8em;
+
+}
+
+img[alt="icone de recherche"]{
+    height: 1.8em;
+}
+
+#contact-link{
+    text-decoration: none;
+    font-family: var(--font-family-title);
+    font-size: 20px;
+    color: #ffffff;
+    display: none;
+}
+
+
+#account-link{
+    text-decoration: none;
+    font-family: var(--font-family-title);
+    font-size: 20px;
+    color: #ffffff;
+    display: none;
+}
+
+#shearch-icon-text{
+    text-decoration: none;
+    font-family: var(--font-family-title);
+    font-size: 20px;
+    color: #ffffff;
+    display: none;
+}
+
+
+
+
+/* menu-hamburger*/
 .label-menu-hamburger{
     cursor: pointer;
 }
 #menu-hamburger-avec-liste{
+    position: relative;
     height: 2.5em;
+
 }
 
 #menu-hamburger{
@@ -37,26 +105,47 @@ nav > div:first-child {
     position : absolute;
     background-color: white;
     margin-top: 0px;
+    padding: 0;
     border:1px solid black;
     list-style-type: none;
     font-family: var(--font-family-title);
     font-weight: 500;
-    overflow: hidden;
-    
+    transform: translateX(-25vw);
 }
+
+.menu-categories li{
+    transition: 0.5s;
+}
+
+
 .menu-categories li:hover{
     overflow: visible;
     padding-left: 20px;
     transition: 0.5s;
 }
 
-ul li a{
+.menu-categories li a{
     color: var(--title-color-secondary);
+    font-family: var(--font-family-title);
     font-size: 1em;
+    font-weight: 500;
     text-decoration: none;
     margin-right: 50px;
+    padding-left: 20px;
 
 }
+
+
+.menu-categories li:last-child  {
+    border-top:1px solid var(--title-color-secondary);
+}
+
+.menu-categories li:last-child a {
+    font-weight: 600;
+}
+
+
+
 
 #menu-hamburger:checked + .menu-categories{
     display: block;
@@ -117,34 +206,6 @@ ul li a{
     
 }
 
-.navContenairIcon{
-    width: 50vw;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-img[alt="menu hamburger"]{
-    height: 2.5em;
-    width: auto;
-}
-
-img[alt="icon de compte"]{
-    height: 2em;
-
-}
-
-/* logo top left */
-nav>div>a:first-of-type{
-    display: inline;
-    align-self: center;
-    margin-left: 20px;
-}
-
-img[alt="logo"]{
-    height: 2em;
-
-}
 
 
 /* h1 et h2*/
@@ -193,28 +254,6 @@ h2{
 }
 
 
-/*responsive du h1 et son contenair pour smartphone*/
-@media only screen and (max-width:768px){
-    h1{
-        font-size: 20pt;
-    }
-    .h1Contenair{
-        height:80px;
-        width: 100vw;
-    }
-    h2{
-        font-size: 18pt;
-
-    }
-    .h2Contenair{
-    height: 100px;
-}
-   .menu-categories-horizontal{
-    display: none;
-    
-}
-
-}
 
 
 
@@ -285,13 +324,6 @@ main>section>div:first-of-type{
 }
 
 
-@media only screen and (max-width:768px){
-    .articleContenair{
-    width: 90vw;
-    }
-}
-
-
 
 
 .articleContenair:hover {
@@ -305,14 +337,7 @@ main>section>div:first-of-type{
     overflow: hidden;
 }
 
-@media only screen and (min-width:370px) {
-    .articleContenairImage{
-    min-width: 186px;
-    height: 116px;
-    overflow: hidden;
-}
-    
-}
+
 .articleImage{
     width: 100%;
     height: 100%;
@@ -411,6 +436,7 @@ footer{
 #ul-footer-links-1 a{
     font-family: var(--font-family-title);
     font-size: 1em;
+    text-decoration: none;
     color: #ffffff;
     border-right:1px solid rgb(255, 255, 255);
     padding-right: 10px;
@@ -464,6 +490,82 @@ footer{
     
 
 }
+
+/*responsive du h1 et son contenair pour smartphone*/
+@media only screen and (max-width:768px){
+    h1{
+        font-size: 20pt;
+    }
+    .h1Contenair{
+        height:80px;
+        width: 100vw;
+    }
+    h2{
+        font-size: 18pt;
+
+    }
+    .h2Contenair{
+    height: 100px;
+}
+   .menu-categories-horizontal{
+    display: none;
+    
+}
+
+}
+
+
+@media only screen and (min-width:370px) {
+    .articleContenairImage{
+    min-width: 186px;
+    height: 116px;
+    overflow: hidden;
+}
+    
+}
+
+@media only screen and (max-width:768px){
+    .articleContenair{
+    width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .menu-categories{
+    transform: translateX(-45vw);
+};
+}
+    
+
+@media only screen and (min-width: 769px) {
+    #menu-hamburger-avec-liste{
+        display: none;
+
+    }
+    img[alt="icone de recherche"]{
+    height: 1.2em;
+    }
+
+    #shearch-icon-text{
+        text-decoration: none;
+        font-family: var(--font-family-title);
+        color: #ffffff;
+        display: block;
+    }
+    #shearch-only-icon{
+        display: none;
+    }
+    #contact-link{
+        display: block;
+    }
+    #account-icon{
+        display:none;
+    }
+    #account-link{
+        display: block;
+    }
+}
+
 
 
 
