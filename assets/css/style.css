@@ -412,7 +412,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(10,1fr);
     grid-template-rows: repeat(3,1fr);
-   margin-top: 30px;
+    margin-top: 30px;
 }
 /*NOUS CONTACTER ET A PROPOS FOOTER*/
 #ul-footer-links-1{
@@ -465,13 +465,21 @@ footer{
     height: 40px;
 }
 
+img[alt="icone de Facebook"]{
+    margin-right: 20px;
+}
+
+
+
+
+
 
 /*INFO FOOTER*/
 #footer-info{
     width: 100%;
     max-width: 100vw;
     grid-column: 1 / span10;
-    grid-row: 2/span4;
+    grid-row: 2/span2;
     display: flex;
     justify-content: center;
     overflow-wrap: break-word;
@@ -533,7 +541,32 @@ footer{
 @media only screen and (max-width: 480px){
     .menu-categories{
     transform: translateX(-45vw);
-};
+}
+    footer{
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: 20% 25% 1fr;
+    
+}
+    #ul-footer-links-1{
+        justify-content: center;
+    grid-column: 1/span10;
+    grid-row: 1;
+}
+    #div-footer-links-2{
+    justify-content: center;
+    grid-column: 1/span10;
+    grid-row: 2;  
+}
+    img[alt="icone de Facebook"]{
+        margin: 0;
+}
+
+    #footer-info{
+    grid-column: 1 / span10;
+    grid-row: 3;
+  
+
+}
 }
     
 
@@ -544,6 +577,20 @@ footer{
     }
     img[alt="icone de recherche"]{
     height: 1.2em;
+    }
+    #ul-footer-links-1{
+    grid-column: 6/span2;
+    grid-row: 1/3;
+    }
+    #div-footer-links-2{
+    justify-content: center;
+    grid-column: 9/span2;
+    grid-row: 1/3;  
+    }
+
+    #footer-info{
+    grid-column: 1/6;
+    grid-row: 1/span3;
     }
 
     #shearch-icon-text{
